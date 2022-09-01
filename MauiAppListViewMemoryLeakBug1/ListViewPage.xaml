@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MauiAppListViewMemoryLeakBug1.ListViewPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodel="clr-namespace:MauiAppListViewMemoryLeakBug1">
+    <ContentPage.BindingContext>
+        <viewmodel:ViewModel />
+    </ContentPage.BindingContext>
+    <ListView ItemsSource="{Binding list}">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Detail="{Binding Detail}" Text="{Binding Text}" />
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+</ContentPage>
